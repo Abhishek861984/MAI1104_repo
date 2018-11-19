@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>df</title>
+</head>
+<body>
+<h1 > <u>REGISTRATION FORM </u></h1>
+ <form name="RegForm"  onsubmit="return GEEKFORGEEKS()"></form>
+
+
+<tr>
+<td> NAME :</td>
+<td><input class="demo1" type="text" name="Name" maxlength="30"/>
+</td>
+</tr><br><br><br><br>
+
+<button type="button" onclick="GEEKFORGEEKS()">SEND</button>
+
+
+</body>
+
+<script type="">
+	 var name= document.forms["RegForm"]["Name"]; 
+
+	  	function GEEKFORGEEKS()                                    
+{ 
+    if (name.value == "")                                  
+    { 
+        window.alert("Please enter your name."); 
+        name.focus(); 
+        return false; 
+    } 
+
+
+</script>
+</html>

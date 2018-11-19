@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>checkbox</title>
+	<style>
+        .f2{
+        	font-size: 20px;
+        	list-style: none;
+
+
+        }
+		
+	</style>
+</head>
+<body>
+	<from class="f2">
+		<input type="checkbox" onclick="disp('a1','movie_b3')" id="a1"><a href="#" onclick="disp('a1','movie_b3','a')">Baahgi2</a><br>
+		<input type="checkbox" onclick="disp('a2','movie_b4')" id="a2"><a href="#" onclick="disp('a2','movie_b4','a')">Aashiqui2</a><br>
+		<input type="checkbox" onclick="disp('a3','movie_b5')" id="a3"><a href="#" onclick="disp('a3','movie_b5','a')">Haif Girlfriend</a><br>
+		<input type="checkbox" onclick="disp('a4','movie_b6')" id="a4"><a href="#" onclick="disp('a4','movie_b6','a')">Dhadak</a><br>
+	</from>
+
+       <img id="movie_b3"   src="baaghi2.jpg" alt=" Movies"width="300px"; height="300px";/>
+       <img id="movie_b4"   src="poster.jpg"  alt=" Movies"width="300px"; height="300px";/>
+       <img id="movie_b5"   src="h1.jfif"     alt=" Movies"width="300px"; height="300px";/>
+       <img id="movie_b6"   src="Dhadak.jpg"  alt=" Movies"width="300px"; height="300px";/>
+
+<script >
+	function disp(id,img_id,from="check") 
+
+	{
+		var elem =document.getElementById(id);
+	    var img  =document.getElementById(img_id);
+		if (elem.checked  && from =="a")
+
+		{
+			elem.checked = false;
+		    img.style.display ="none";
+		}
+
+		else if(elem.checked && from=="check")
+		{
+			img.style.display="inline-block";
+		}
+
+		else if(from=="a")
+		{
+	    	elem.checked= true;
+			img.style.display="inline-block";
+		}
+
+		else{
+			img.style.display="none";
+		}
+	}
+</script>
+</body>
+</html>

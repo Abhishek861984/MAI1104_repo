@@ -1,0 +1,10 @@
+#paral
+ {
+ 	text-align: right; 
+ 	background-color:rgb(255, 204, 102);
+ }
+<style>
+p::first-letter {
+    color: #ff0000;
+    font-size: xx-large;
+}
