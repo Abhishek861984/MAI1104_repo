@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form</title>
+	<meta charset="utf-8">
+<script type="text/javascript">
+function login_check() {
+	var user = document.forms["login"]["user"].value;
+	var pass = document.forms["login"]["pass"].value;
+
+	for (var i=0; i < user.length; i++){
+		var value = parseInt(user[i]);
+		if(Number.isInteger(value))
+		{
+			alert("Usernmae should contain alphabets only");
+			return;
+
+		}
+	}
+     
+     if(pass.length<5)
+     {
+     	alert("password should be atlest 5 character long");
+     	return;
+     }
+
+	alert("Login successful")
+
+	}
+
+</script>
+</head>
+
+
+<body>
+
+<form name="login" action="" onsubmit="login_check()">
+<div class="demo1">
+Username: <input type="text" name="user" placeholder="username" required><br><br>
+</div>
+
+<div class="demo2">
+Password: <input type="password" name="pass" placeholder="password" required><br><br>
+</div>
+
+<input type="submit" value="Log-In">
+</form>
+</body>
+</html>

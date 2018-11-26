@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>box</title>
+	<meta charset="utf-8">
+
+<style type="text/css">
+
+	.demo1{
+		margin:50px;
+		width: 250px;
+	}
+
+	.box{
+		padding: 30px;
+		display: inline-block;
+		border: 2px solid black;
+
+	}
+
+	.odd{
+		background-color: red;
+	}
+
+	.even{
+		background-color: #196F3D;
+	}
+</style>
+</head>
+
+
+<body>
+   <div class="demo1">
+     <div class="odd box"></div>
+     <div class="even box"></div>
+     <div class="odd box"></div>
+     <div class="even box"></div>
+     <div class="odd box"></div>
+     <div class="even box"></div>
+     <div class="odd box"></div>
+     <div class="even box"></div>
+     <div class="odd box"></div>
+ </div>
+    
+    <script type="text/javascript">
+    	 var even = document.getElementsByClassName('even');
+    	 var odd  = document.getElementsByClassName('odd');
+
+    	 function even_change() {
+    	 	for (var i = 0; i<even.length; i++)
+    	 	{
+               even[i].style.background="yellow";
+    	 	}
+    	 }
+
+
+    	 function even_reset() {
+    	 	for (var i = 0; i<even.length; i++)
+    	 	{
+               even[i].style.background="green";
+    	 	}
+    	 }
+
+    	 for (var i = 0; i < even.length; i++) {
+    	 	even[i].addEventListener("mouseover",even_change);
+    	 	even[i].addEventListener("mouseout",even_reset);
+    	 }
+    	 
+
+    	 function odd_change() {
+    	 	for (var i = 0; i<odd.length; i++)
+    	 	{
+               odd[i].style.background="yellow";
+    	 	}
+    	 }
+
+
+    	 function odd_reset() {
+    	 	for (var i = 0; i<odd.length; i++)
+    	 	{
+               odd[i].style.background="red";
+    	 	}
+    	 }
+
+    	 for (var i = 0; i < odd.length; i++) {
+    	 	odd[i].addEventListener("mouseover",odd_change);
+    	 	odd[i].addEventListener("mouseout",odd_reset);
+    	 }
+
+    </script>
+
+</body>
+</html>
